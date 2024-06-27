@@ -52,4 +52,4 @@ Opciones:
 - Saber si se desconecta el pastor
 - Mapa fincas
 
-## Fecha de lanzamiento: 2025
+## Fecha de lanzamiento: alpha_2025
