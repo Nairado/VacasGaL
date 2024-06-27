@@ -1,6 +1,10 @@
 # VacasGaL
 **Título del proyecto**
+
+
 **Objetivos generales**
+
+
 **Audiencia**
 
 **Necesidades**
