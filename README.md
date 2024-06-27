@@ -1,5 +1,6 @@
 # VacasGaL
-**Título del proyecto**
+***Título del proyecto***
+
 
 
 **Objetivos generales**
