@@ -44,10 +44,12 @@ Opciones:
 - Boca a boca
 - TVG
 - RS
+- Ferias
 
 ## **Ideas locas**
 - Reconocimiento de etiqueta por foto
 - Dispositivo de localización, avisa si la vaca sale de la superficie de la finca que se haya establecido
 - Saber si se desconecta el pastor
 - Mapa fincas
-- 
+
+## Fecha de lanzamiento: 2025
