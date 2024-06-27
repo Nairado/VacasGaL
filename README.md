@@ -1,6 +1,6 @@
-#**VacasGaL**
+# **VacasGaL**
 
-##**Descripción**
+## **Descripción**
 Aplicación software destinada a la gestión de ganado bovino para explotaciones agrícolas de grande, mediano y pequeño tamaño. 
 
 **Objetivos generales**
