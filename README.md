@@ -38,7 +38,6 @@ Aternativas de negocio:
   4. Pago por descarga y uso de la app (pago único de instalación o suscripción).
 
 ## **Competencia**
-
 <table>
     <thead>
         <tr>
