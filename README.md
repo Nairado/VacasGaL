@@ -1,55 +1,82 @@
-# **VacasGaL**
+Idioma: [galego](./doc/outline/README.gl.md) | [inglés](./doc/outline/README.en.md)
 
-## **Descripción**
+![VacasGaL](./doc/img/vacasGaL.png)
+
+# VacasGaL
+
+## Índice
+
+- [Descripción](#descripción)
+- [Uso](#uso)
+- [Instalación](#instalación)
+- [Desinstalación](#desinstalación)
+- [Licencia](#licencia)
+- [Políticas de contribución](#políticas-de-contribución)
+  - [Código](#código)
+  - [Git](#git)
+  - [Test](#tests)
+- [Documentación](#documentación)
+
+## Descripción
 Aplicación software destinada a la gestión de ganado bovino para explotaciones agrícolas de grande, mediano y pequeño tamaño. 
 
-## **Objetivos generales**
-1. Proporcionar al usuario un sistema de gestión y control del ganado bovino de su explotación.
-2. Ofrecer una interfaz amigable para todo tiepo de usuarios.
+## Uso
 
-## **Audiencia**
-- Pequeñas, medianas y grandes explotaciones agrícolas de ganado bovino.
+*Reclamo comercial del uso que se le dará a este software*  
 
-## **Necesidades**
-- Gestión de nacimientos de nuevas cabezas de ganado
-  - Inlcusión de "árbol genealógico"
-- Gestión de vacunas y consultas médicas
-- Gestión de estado "quente o no"
-- Gestión de ventas
-  - Precio/Kilos/Comprador/Edad/Padres
-- Clasificación por edades/leche/carne/etc
-- Gestión de fincas (extensión)
-  - Pastoreo
-  - Silo o empacar (conocer la producción anual)
-- Ranking de vacas (crías vendidas más o menos rentables)
-- Gráficos
+## Instalación
 
-## **Modelo de negocio**
-Opciones:
-1. Incluir una sección de anuncios y promociones de posibles compradores de ganado. (Pagan por anunciarse)
-2. Anunciarse los propios usuarios, la venta de su ganado (Pagan por anuncio)
-3. Anuncios de terceros
-4. Pagar po la app
+Para poder desplegar el proyecto en su entorno debe ejecutar el [script de instalación](https://github.com/Nairado/VacasGaL/blob/main/README.md?ref_type=heads&inline=false):
 
-## **Competencia**
-- Airtable
-- AgriWebb
-- Herdwatch LiveStock Management
-- Fieldmargin: manage your farm
-- HerdVision
-- Remedy Farm
-- All4Cows
+```bash
+chmod +x setup.sh
+./setup.sh
+```
 
-## **Modelo de promoción**
-- Boca a boca
-- TVG
-- RS
-- Ferias
+## Desinstalación
 
-## **Ideas locas**
-- Reconocimiento de etiqueta por foto
-- Dispositivo de localización, avisa si la vaca sale de la superficie de la finca que se haya establecido
-- Saber si se desconecta el pastor
-- Mapa fincas
+Para desinstalar el proyecto debe ejecutar el  [script de desinstalación](https://gitlab.iessanclemente.net/dawo/a20juanav/-/raw/master/scripts/cleanup.sh?ref_type=heads&inline=false):
 
-## Fecha de lanzamiento: alpha_2025
+```bash
+chmod +x cleanup.sh
+./cleanup.sh
+```
+
+## Licencia
+
+*Seleccionar una licencia*  
+Puede consultar la licencia en el archivo [LICENCIA.md](./LICENSE.md).
+
+## Políticas de contribución
+
+*Definir los procesos de añadir y modificar código*
+
+### Código
+
+- **Nueva funcionalidad**
+
+- **Corrección/actualización del código**
+
+### Git
+
+- **Nombrado de ramas**
+
+- **Nombrado de commits**
+
+- **Política de PRs**
+
+### Tests
+
+- **Test automatizados**
+
+
+## Documentación
+
+1. [Estudio preliminar](./doc/outline/preliminary_state.md)
+2. [Análisis: Requerimientos del sistema](./doc/outline/analysis.md)
+3. [Diseño](./doc/outline/design.md)
+4. [Codificación y Pruebas](./doc/outline/test_coding.md)
+5. [Manual](./doc/outline/manual.md)
+6. [Referencias](./doc/outline/references.md)
+7. [Planificación](./doc/outline/planning.md)
+8. [Presupuesto](./doc/outline/budget.md)
