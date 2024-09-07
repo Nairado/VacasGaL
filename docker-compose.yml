@@ -1,16 +1,6 @@
 version: "3.8"
 
 services:
-  db:
-    image: postgres:latest
-    ports:
-      - ${PSQL_PORT}:${PSQL_PORT}
-    environment:
-      POSTGRES_USER: ${PSQL_USER}
-      POSTGRES_PASSWORD: ${PSQL_PSW}
-      POSTGRES_DB: ${PSQL_DB}
-    volumes:
-      - ${PSQL_VOLUME_PATH}
 
   backend:
     build:
@@ -21,10 +11,6 @@ services:
         BCK_PORT: ${BCK_PORT}
     ports:
       - ${BCK_PORT}:${BCK_PORT}
-    volumes:
-      - ${BCK_VOLUME_PATH}
-    depends_on:
-      - db
     environment:
       DATABASE_URL: "postgresql://${PSQL_USER}:${PSQL_PSW}@db:${PSQL_PORT}/${PSQL_DB}"
     command: flask run --host=0.0.0.0 --port=${BCK_PORT}
@@ -37,14 +23,10 @@ services:
         FRNT_WORKDIR: ${FRNT_WORKDIR}
     ports:
       - ${FRNT_PORT}:${FRNT_PORT}
-    volumes:
-      - ${FRNT_VOLUME_PATH}
-      - ${NODE_VOLUME_PATH}
-    environment:
-      - NODE_ENV=${NODE_ENV}
     depends_on:
       - backend
+    environment:
+      - NODE_ENV=${NODE_ENV}
     command: ionic serve --host 0.0.0.0 --port ${FRNT_PORT} --disableHostCheck
 
 volumes:
-  pgdata:
