@@ -15,8 +15,11 @@ services:
   backend:
     depends_on:
       - db
+    env_file:
+      - .env
     environment:
       FLASK_ENV: development
+      DATABASE_URL: "postgresql://${PSQL_USER}:${PSQL_PSW}@db:${PSQL_PORT}/${PSQL_DB}"
     volumes:
       - ${BCK_VOLUME_PATH}
 

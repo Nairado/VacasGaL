@@ -18,7 +18,7 @@ Idioma: [galego](./doc/outline/README.gl.md) | [inglés](./doc/outline/README.en
 - [Documentación](#documentación)
 
 ## Descripción
-Aplicación software destinada a la gestión de ganado bovino para explotaciones agrícolas de grande, mediano y pequeño tamaño. 
+Aplicación software destinada a la gestión de ganado bovino para explotaciones agrícolas de gran, medio y pequeño tamaño. 
 
 ## Uso
 
