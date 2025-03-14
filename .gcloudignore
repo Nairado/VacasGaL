@@ -1,0 +1,3 @@
+#!include:.gitignore
+
+./docker-compose.override.yml

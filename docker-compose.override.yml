@@ -1,1 +1,34 @@
-# Útil si queremos separar entornos de desarrollo y producción.
+version: "3.8"
+
+services:
+  db:
+    image: postgres:latest
+    ports:
+      - ${PSQL_PORT}:${PSQL_PORT}
+    environment:
+      POSTGRES_USER: ${PSQL_USER}
+      POSTGRES_PASSWORD: ${PSQL_PSW}
+      POSTGRES_DB: ${PSQL_DB}
+    volumes:
+      - ${PSQL_VOLUME_PATH}
+
+  backend:
+    depends_on:
+      - db
+    env_file:
+      - .env
+    environment:
+      FLASK_ENV: development
+      DATABASE_URL: "postgresql://${PSQL_USER}:${PSQL_PSW}@db:${PSQL_PORT}/${PSQL_DB}"
+    volumes:
+      - ${BCK_VOLUME_PATH}
+
+  frontend:
+    environment:
+      NODE_ENV: development
+    volumes:
+      - ${FRNT_VOLUME_PATH}
+      - ${NODE_VOLUME_PATH}
+
+volumes:
+  pgdata: 
