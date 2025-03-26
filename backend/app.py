@@ -2,7 +2,7 @@ from os import getenv
 from flask import Flask
 from flask_sqlalchemy import SQLAlchemy
 from flask_migrate import Migrate
-from models import db  # Importar la base de datos desde models.py
+from models import db
 
 app = Flask(__name__)
 
