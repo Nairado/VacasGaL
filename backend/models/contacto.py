@@ -25,6 +25,6 @@ class Contacto(db.Model):
 
     # Relationships
     compras = relationship('Compra', back_populates='contacto', cascade='all, delete-orphan')
-    historiales = relationship('HistorialClinico', back_populates='contacto', cascade='all, delete-orphan')
+    historiales_clinicos = relationship('HistorialClinico', back_populates='contacto', cascade='all, delete-orphan')
     usuario = relationship('Usuario', back_populates='contactos')
     ventas = relationship('Venta', back_populates='contacto', cascade='all, delete-orphan')

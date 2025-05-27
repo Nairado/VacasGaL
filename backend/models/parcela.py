@@ -23,5 +23,5 @@ class Parcela(db.Model):
 
     # Relationships
     explotacion = relationship('Explotacion', back_populates='parcelas')
-    produccion = relationship('Produccion', backref='parcelas')
+    produccion = relationship('Produccion', back_populates='parcelas')
     reses = relationship('Res', back_populates='parcela', cascade='all, delete-orphan')

@@ -2,3 +2,4 @@ Flask==3.0.3
 Flask-Migrate==4.0.7
 Flask-SQLAlchemy==3.1.1
 psycopg2-binary==2.9.10
+pydantic[email]==2.11.5

@@ -1,11 +1,8 @@
-from flask_sqlalchemy import SQLAlchemy
+from extensions import db
 
-db = SQLAlchemy()
-
-# All models should be imported here to avoid circular imports
 from models.compra import Compra
 from models.contacto import Contacto
-from models.enum import Enum
+from models.enums import TipoContacto, Sexo, Especie
 from models.explotacion import Explotacion
 from models.historial_clinico import HistorialClinico
 from models.parcela import Parcela

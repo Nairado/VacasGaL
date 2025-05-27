@@ -39,7 +39,7 @@ class Res(db.Model):
     raza = relationship('Raza', back_populates='reses')
     compra = relationship('Compra', back_populates='reses')
     venta = relationship('Venta', back_populates='reses')
-    historiales = relationship('HistorialClinico', back_populates='res', cascade='all, delete-orphan')
+    historiales_clinicos = relationship('HistorialClinico', back_populates='res', cascade='all, delete-orphan')
 
     # Self-referential relationships
     progenitor = relationship('Res', remote_side=[uuid], foreign_keys=[uuid_progenitor], post_update=True, backref='crias_macho')
