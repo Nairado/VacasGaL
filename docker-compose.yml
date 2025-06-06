@@ -13,6 +13,7 @@ services:
       - ${BCK_PORT}:${BCK_PORT}
     environment:
       DATABASE_URL: "postgresql://${PSQL_USER}:${PSQL_PSW}@db:${PSQL_PORT}/${PSQL_DB}"
+      PYTHONPATH: ${BCK_WORKDIR}
     command: flask run --host=0.0.0.0 --port=${BCK_PORT}
 
   frontend:
