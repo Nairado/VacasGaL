@@ -1,10 +1,13 @@
-from models.usuario import Usuario
 from extensions import db
-import uuid
+from uuid import uuid4, UUID
 
-def create_usuario_service(data):
+from models.usuario import Usuario
+from schemas.usuario import UsuarioCreate, UsuarioUpdate
+
+
+def create_usuario_service(data: UsuarioCreate):
     nuevo_usuario = Usuario(
-        uuid=uuid.uuid4(),
+        uuid=uuid4(),
         username=data.username,
         nombre=data.nombre,
         apellido=data.apellido,
@@ -19,7 +22,21 @@ def create_usuario_service(data):
     return nuevo_usuario
 
 
-def list_usuario_service(page, per_page, username=None):
+def delete_usuario_service(usuario_id: UUID):
+    usuario = Usuario.query.filter_by(uuid=usuario_id).first()
+    if not usuario:
+        return False
+
+    db.session.delete(usuario)
+    db.session.commit()
+    return True
+
+
+def get_usuario_service(uuid: UUID):
+    return Usuario.query.filter_by(uuid=uuid).first()
+
+
+def list_usuario_service(page: int, per_page: int, username: str = None):
     query = Usuario.query
 
     if username:
@@ -27,3 +44,15 @@ def list_usuario_service(page, per_page, username=None):
 
     pagination = query.paginate(page=page, per_page=per_page, error_out=False)
     return pagination.items, pagination.total
+
+
+def update_usuario_service(usuario_id: UUID, data: UsuarioUpdate):
+    usuario = Usuario.query.filter_by(uuid=usuario_id).first()
+    if not usuario:
+        return None
+
+    for field, value in data.model_dump(exclude_unset=True).items():
+        setattr(usuario, field, value)
+
+    db.session.commit()
+    return usuario

@@ -8,7 +8,7 @@ def validate_body(schema: Type[BaseModel]):
         def wrapper(*args, **kwargs):
             try:
                 data = schema.model_validate(request.json)
-                return fn(data, *args, **kwargs)
+                return fn(*args, **kwargs, data=data)
             except ValidationError as e:
                 return {"error": e.errors()}, 422
         wrapper.__name__ = fn.__name__
